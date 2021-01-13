@@ -35,7 +35,8 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="row">
+      <div className="col-md col-xs">
         <Navigation />
         <Header data={this.state.resumeData.Header}/>
         <Features data={this.state.resumeData.Features}/>
@@ -45,6 +46,7 @@ export class App extends Component {
         <Testimonials  data={this.state.resumeData.Testimonials}/>
         <Team  data={this.state.resumeData.Team}/>
         <Contact  data={this.state.resumeData.Contact}/>
+      </div>
       </div>
     )
   }

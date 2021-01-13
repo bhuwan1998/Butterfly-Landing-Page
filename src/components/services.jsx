@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 export class Services extends Component {
   render() {
     return (
@@ -13,14 +14,16 @@ export class Services extends Component {
             </p>
           </div>
           <div className="row">
+            
             {this.props.data
               ? this.props.data.map((d, i) => (
-                  <div  key={`${d.name}-${i}`} className="col-md-4">
+                  <div  key={`${d.name}-${i}`} className="col-md-6 col-xs">
                     {" "}
-                    <i className={d.icon}></i>
+                    <a href={d.link} > <i className={d.icon}></i> </a> 
                     <div className="service-desc">
                       <h3>{d.name}</h3>
                       <p>{d.text}</p>
+                      
                     </div>
                   </div>
                 ))

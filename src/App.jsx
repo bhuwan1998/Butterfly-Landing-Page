@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Navigation from './components/navigation';
 import Header from './components/header';
-import Features from './components/features';
 import About from './components/about';
 import Services from './components/services';
 import Gallery from './components/gallery';
@@ -20,20 +19,23 @@ export class App extends Component {
 
   componentDidMount() {
     this.getlandingPageData();
+
+
   }
 
   render() {
     return (
-      <div>
+      <div className="row">
+      <div className="col-xs col-md-12">
         <Navigation />
         <Header data={this.state.landingPageData.Header} />
-        <Features data={this.state.landingPageData.Features} />
         <About data={this.state.landingPageData.About} />
         <Services data={this.state.landingPageData.Services} />
         <Gallery />
         <Testimonials data={this.state.landingPageData.Testimonials} />
         <Team data={this.state.landingPageData.Team} />
         <Contact data={this.state.landingPageData.Contact} />
+      </div>
       </div>
     )
   }

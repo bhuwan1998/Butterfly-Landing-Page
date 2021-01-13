@@ -4,11 +4,11 @@ export class Header extends Component {
   render() {
     return (
       <header id="header">
-        <div className="intro">
+        <div className="intro col-xs">
           <div className="overlay">
             <div className="container">
               <div className="row">
-                <div className="col-md-8 col-md-offset-2 intro-text">
+                <div className="col-md-8 col-md-offset-2 intro-text col-xs">
                   <h1>
                     {this.props.data ? this.props.data.title : "Loading"}
                     <span></span>
@@ -17,7 +17,7 @@ export class Header extends Component {
                     {this.props.data ? this.props.data.paragraph : "Loading"}
                   </p>
                   <a
-                    href="#features"
+                    href="#about"
                     className="btn btn-custom btn-lg page-scroll"
                   >
                     Learn More

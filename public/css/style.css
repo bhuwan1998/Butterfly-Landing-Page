@@ -50,11 +50,7 @@ a:hover, a:focus {
 ul, ol {
 	list-style: none;
 }
-ul, ol {
-	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
-}
+
 hr {
 	height: 2px;
 	width: 70px;
@@ -184,14 +180,16 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 /* Header Section */
 .intro {
 	display: table;
-	width: 100%;
+	width: auto;
 	padding: 0;
-	background: url(../img/intro-bg.jpg) center center no-repeat;
+	background: url(../img/butterfly.jpg) center center no-repeat;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+
+	
 }
 .intro .overlay {
 	background: rgba(0,0,0,0.2);
@@ -199,24 +197,31 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro h1 {
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
-	font-size: 82px;
+	font-size: 30px;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-top: 0;
 	margin-bottom: 10px;
 }
 .intro h1 span {
-	font-weight: 800;
+	font-weight: 200;
 	color: #5ca9fb;
+	width: 10;
 }
 .intro p {
 	color: #fff;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 300;
 	line-height: 30px;
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
+
+.intro img {
+	width: auto;
+}
+
+
 header .intro-text {
 	padding-top: 350px;
 	padding-bottom: 200px;
@@ -367,7 +372,6 @@ header .intro-text {
 }
 .hover-bg:hover .hover-text>h4 {
 	opacity: 1;
-	-webkit-backface-visibility: hidden;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
@@ -578,3 +582,6 @@ color: #777;
 	margin: 50px 0;
 }
 }
+
+
+
