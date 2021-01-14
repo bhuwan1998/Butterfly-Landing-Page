@@ -8,7 +8,7 @@ export class Header extends Component {
           <div className="overlay">
             <div className="container">
               <div className="row">
-                <div className="col-md-8 col-md-offset-2 intro-text col-xs">
+                <div className="col-md-12 intro-text col-xs">
                   <h1>
                     {this.props.data ? this.props.data.title : "Loading"}
                     <span></span>

@@ -10,6 +10,9 @@ body, html {
 h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
 }
+.serv h4{
+	color: white;
+}
 h2 {
 	text-transform: uppercase;
 	margin: 0 0 20px 0;
@@ -180,7 +183,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 /* Header Section */
 .intro {
 	display: table;
-	width: auto;
+	width: 100%;
 	padding: 0;
 	background: url(../img/butterfly.jpg) center center no-repeat;
 	background-color: #e5e5e5;
@@ -217,9 +220,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 60px;
 }
 
-.intro img {
-	width: auto;
-}
 
 
 header .intro-text {
@@ -581,6 +581,40 @@ color: #777;
 #about img {
 	margin: 50px 0;
 }
+}
+
+.serv a.main-item {
+	position: relative; 
+	display: inline-block;
+	font-size: 2em; 
+	color: white; 
+	font-weight: 800;
+	overflow: hidden;
+
+}
+
+.served {
+	padding-top: 10%;
+}
+
+.serv a.main-item::before{
+	position: absolute; 
+	content: attr(data-content); 
+	top: 0; 
+	left: 0; 
+	color: rgb(70, 134, 120); 
+	overflow: hidden; 
+	transition: width 275ms ease;
+
+}
+
+.serve a.main-item::before{
+	width: 0;
+	white-space: nowrap;
+}
+
+.serve a.main-item::before{
+	width: 100%;
 }
 
 

@@ -35,14 +35,10 @@ export class Navigation extends Component {
               </li>
               <li>
                 <a href="#services" className="page-scroll">
-                  Services
+                  Brands
                 </a>
               </li>
-              <li>
-                <a href="#portfolio" className="page-scroll">
-                  Gallery
-                </a>
-              </li>
+             
               <li>
                 <a href="#contact" className="page-scroll">
                   Contact

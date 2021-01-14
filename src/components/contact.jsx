@@ -103,11 +103,6 @@ export class Contact extends Component {
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href={this.props.data ? this.props.data.youtube : "/"}>
-                        <i className="fa fa-youtube"></i>
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -117,10 +112,8 @@ export class Contact extends Component {
         <div id="footer">
           <div className="container text-center">
             <p>
-              &copy; 2020 Issaaf Kattan React Land Page Template. Design by{" "}
-              <a href="http://www.templatewire.com" rel="nofollow">
-                TemplateWire
-              </a>
+              &copy; 2020 Butterfly Consultancy 2020 
+              
             </p>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Card_morph} from './neumorphic';
 
 
 export class about extends Component {
