@@ -3,6 +3,7 @@ import Navigation from './components/navigation';
 import Header from './components/header';
 import About from './components/about';
 import Services from './components/services';
+import ContactUs from './components/contactUs';
 
 
 import Contact from './components/contact';

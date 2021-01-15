@@ -296,6 +296,7 @@ header .intro-text {
 	padding: 100px 0;
 	background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
 	color: #fff;
+	background-blend-mode:overlay ;
 }
 #services .service-desc {
 	margin: 10px 10px 20px;
@@ -323,13 +324,23 @@ header .intro-text {
 	color: #fff;
 	box-shadow: 10px 10px 10px rgba(0,0,0,.05);
 }
+
+#services img {
+	border-radius: 80%;
+	height: 420px;
+	width: 490px;
+	box-shadow: 10px 10px 10px rgba(0,0,0, .05);
+	background-blend-mode: overlay;
+}
 #services h3 {
 	font-weight: 500;
 	padding: 5px 0;
 	color: #fff;
+	padding-top: 3%;
 }
 #services p {
 	color: rgba(255,255,255,.75);
+	padding-top: 3%;
 }
 #services .service-desc {
 	margin-bottom: 40px;
@@ -583,6 +594,10 @@ color: #777;
 }
 }
 
+.serv {
+	padding-top: 3%;
+}
+
 .serv a.main-item {
 	position: relative; 
 	display: inline-block;
@@ -593,9 +608,7 @@ color: #777;
 
 }
 
-.served {
-	padding-top: 10%;
-}
+
 
 .serv a.main-item::before{
 	position: absolute; 
@@ -619,3 +632,6 @@ color: #777;
 
 
 
+#contactUs {
+	padding: 10px 10px 10px 10px;
+}

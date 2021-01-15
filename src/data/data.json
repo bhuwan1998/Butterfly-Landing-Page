@@ -7,35 +7,6 @@
     "About": {
         "paragraph": "We are a boutique consulting company based in ACT delivering solutions in the field of Project Management, Information Technology, Construction and Entertainment. Our consultants have extensive and varied experience in markets of India and Australia. We have special research interest in the field of health information focusing on electronic health records."
     },
-    "Services": [{
-            "icon": "fa fa-bolt",
-            "name": "Butterfly Technology Solutions",
-            "text": "The aim is to provide consulting and professional services specialized in IT solutions and outsourcing services. Our Services are divided in two sections.",
-            "link": "www.google.com", 
-            "linkname": "Butterfly Technologies",
-            "subheading": "Outsourced Software Development", 
-            "subdescription": "We specialize in Outsourced Software Development. We provide integration, Software maintenance and custom software development services. Through our partners we provide a team of highly specialized consultants targeting at cost effective and schedule driven solutions with a high quality assurance for the deliverables.", 
-            "second": "Quality Assurance and Auditing", 
-            "desc": "We have consultants trained by Standards Australia with extensive experience with working in QA related areas in Australia and Overseas. We provide QA services in Software quality assurance, conducting internal auditors, preparing process documentation, conducting quality process checks as well as developing quality management systems."
-        },
-        {
-            "icon": "fa fa-building",
-            "name": "Butterfly Buildings",
-            "text": "The aim is to build houses and buildings for our clients like we are building our own. Our team comprises of qualified professionals from the building and construction industry. We are a construction company honestly and reliably. Along with high quality construction work, we offer a much personalised service so that you will directly work with our customer relationship manager who will help you from day one till your keys are handed over.",
-            "link": "localhost:3000/butterflyConstruction", 
-            "linkname": "Butterfly Construction"
-        }, 
-        {
-            "icon": "fa fa-camera",
-            "name": "Butterfly Media Solutions",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.",
-            "link": "localhost:3000/butterflyConstruction", 
-            "linkname": "Butterfly Construction"
-
-        }
-
-
-    ],
     "Testimonials": [{
             "img": "img/testimonials/01.jpg",
             "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
