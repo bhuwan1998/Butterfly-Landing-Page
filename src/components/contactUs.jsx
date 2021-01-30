@@ -1,89 +1,124 @@
 import React, {Component} from 'react'; 
-import {Control, Form, Erros, actions} from 'react-redux-form'; 
-import axios from 'axios';
-import {fetch} from 'node-fetch';
 
-
-
-
-
-
-
-class ContactUs extends Component{
-    
+export default class ContactUs extends Component {
     constructor(props){
-        super(props); 
-
-
-        this.state = {
-            name:'',
-            email: '',
-            message: '' 
-
-        }
-
-
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-      
-        axios({
-          method: "POST", 
-          url:"http://localhost:3002/send", 
-          data:  this.state
-        }).then((response)=>{
-          if (response.data.status === 'success') {
-            alert("Message Sent."); 
-            this.resetForm()
-          } else if(response.data.status === 'fail') {
-            alert("Message failed to send.")
-          }
-        });
-    }
-
-    resetForm(){
-        this.setState({name: '', email: '', message:''});
-    }
-    
-    
-    
-    render() {
-        return (
-            <div id="contactus">
-                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <div className="form-group">  
-                        <label htmlFor="name"> Name </label>
-                        <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} placeholder="Name"/>
-                    </div>
-                    <div className="form-group">  
-                        <label htmlFor="exampleInputEmail1"> Email </label>
-                        <input type="email" className="form-control" value={this.state.email} onChange={this.onEmailChange.bind(this)} placeholder="Email"/>
-                    </div>
-                    <div className="form-group">  
-                        <label htmlFor="message"> Message </label>
-                        <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)}/>
-                    </div>
-                    <button type="submit" className="btn btn-custom btn-primary btn-lg"> Submit </button>
-                </form>
-            </div>
-        );
+        super(props);
         
+        this.state= {
+            user: {
+                name: props.name, 
+                email: props.email, 
+                message: props.message
+
+            }
+        }
     }
 
 
-    onNameChange(event){
-        this.setState({name: event.target.value});
+    handleNameChange(event) {
+        // var extract current value of user 
+        var user = this.state.user;
+
+        // extract modified value from input element
+        user.name = event.target.value;
+
+        // Update the state object
+        this.setState({user: user});
     }
 
-    onEmailChange(event){
-        this.setState({email: event.target.value});
+    handleEmailChange(event){
+        var user = this.state.user;
+
+        user.email = event.target.value;
+
+        this.setState = ({user: user}); 
+
     }
 
-    onMessageChange(event){
-        this.setState({message: event.target.value});
+    handleMessageInput(event){
+        var user = this.state.user;
+
+        user.message = user; 
+
+        this.setState({user: user});
+    }
+
+
+    handleButtonClicked() {
+        console.log(this.state.user);
+
+    }
+
+
+
+    render() {
+        return(
+            <div id="contact">
+                <div className="container">
+                    <div className="col-md-8">
+                        <div className="row">
+                                <div className="section-title">
+                                <h2> Get In Touch</h2>
+                                <p>
+                                         Please fill out the form below to send us an email and we
+                                         will get back to you as soon as possible.
+                                </p>
+                                </div>
+                                <form name="sentMessage" id="contactForm" noValidate>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="form-group">
+                                                <input 
+                                                type="text"  
+                                                value={this.state.user.name} 
+                                                onChange={this.handleNameChange.bind(this)}
+                                                id="name"
+                                                className="form-control"
+                                                required="required"
+                                                placeholder="Name"
+                                                />
+                                                <p className="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                                <div className="form-group">
+                                                    <input 
+                                                    type="email"  
+                                                    value={this.state.user.email} 
+                                                    onChange={this.handleEmailChange.bind(this)}
+                                                    id="email"
+                                                    className="form-control"
+                                                    required="required"
+                                                    placeholder="Email"
+                                                    />
+                                                    <p className="help-block text-danger"></p>
+                                                </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="form-group">
+                                                <textarea 
+                                                    rows="4"
+                                                    name="message"
+                                                    value={this.state.user.email} 
+                                                    onChange={this.handleEmailChange.bind(this)}
+                                                    id="message"
+                                                    className="form-control"
+                                                    required
+                                                    placeholder="Enquiry"
+                                                    ></textarea>
+                                                <p className="help-block text-danger"></p>
+                                            </div>
+                                        </div>
+                                        <div id="success"></div>
+                                        <button type="submit" onClick={this.handleButtonClicked.bind(this)} className="btn btn-custom btn-lg">
+                                                Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                        </div>       
+                    </div>
+                </div>
+            </div>                    
+        );
     }
 }
-
-
-export default ContactUs;
